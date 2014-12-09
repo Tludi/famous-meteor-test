@@ -1,0 +1,25 @@
+<head>
+  <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no">
+</head>
+
+<template name="layout">
+  {{#famousContext id="mainCtx"}}
+    {{#HeaderFooterLayout size="[]" headerSize="45" footerSize="45"}}
+
+      {{#Surface target="header" translate="[0,0,100]"}}
+      	{{> header}}
+      {{/Surface}}
+
+      {{!-- you can also set transition: slideWindowLeft, etc --}}
+
+      {{#RenderController target="content" transition="opacity"}}
+      	{{>yield}}
+      {{/RenderController}}
+      
+      {{#Surface target="footer" translate="[0,0,100]"}}
+        {{> footer}}
+      {{/Surface}}
+
+    {{/HeaderFooterLayout}}	
+  {{/famousContext}}
+</template>

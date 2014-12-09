@@ -1,0 +1,47 @@
+<!-- irises.html -->
+<template name="irises">
+  {{#Surface class="page"}}
+	<ul class="list-group">
+      <li class="list-group-item list-garden-item"> 
+        <div class="media">
+
+          <span class="pull-left thumb-small m-t-mini"> 
+            <small>category</small><br>
+          </span>
+
+          <div class="pull-right text-primary m-t-small"> 
+            <small><i class="garden-number text-active text-primary"></i>1</small>
+            <small><i class="garden-number text-active text-primary"></i>2</small>
+            <small><i class="garden-number text-active text-primary"></i>3</small>
+            <small><i class="garden-number text-active text-primary"></i>4</small>
+            <small><i class="garden-number text-active text-primary"></i>5</small>
+            <small><i class="garden-number text-active text-primary"></i>6</small>
+            <!-- <small><i class="text-active text-primary"></i>edit</small> -->
+          </div>
+
+          <div class="media-body"> 
+            <div>
+              <a href="#" class="">name1</a>
+            </div>   
+          </div>  
+        </div> 
+      </li>
+    </ul>
+    <ul class="list-group">
+
+        {{#each irises}}
+          {{> irisItem}}
+        {{/each}}
+
+      
+    </ul>
+
+	<br/>
+
+    {{> insertIrisForm}}
+
+    <br/>
+
+    <a href="/">Back to Home</a>
+  {{/Surface}}
+</template>
